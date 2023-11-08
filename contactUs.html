@@ -2,6 +2,36 @@
     <head>
         <title>Contact Us</title>
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function validate()
+            {
+                var username = document.signup.uname.value;
+                var firstname = document.signup.fname.value;
+                var lastname = document.signup.lname.value;
+                var password = document.signup.passw.value;
+                var cpassword = document.signup.cpassw.value;
+
+                if(username=="" || firstname=="" || lastname=="" || password=="" || cpassword=="")
+                {
+                    alert("Fill in all the fields")
+                }
+                else{
+                    if(password.length<8 || password.length>15)
+                        {
+                            alert("Password should be between 8-15 characters long")
+                        }
+                    else{
+                        if(password != cpassword)
+                        {
+                            alert("Password and Confirm password should match")
+                        }
+                        else{
+                            alert("Form submitted successfully")
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -41,7 +71,7 @@
                             <td><input type="password" name="cpassw"/><br/></td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="center"><input type="submit"/></td>
+                            <td colspan="2" align="center"><input type="submit" onclick="validate();" value="Sign Up"/></td>
                         </tr>
                     </table>
                     </fieldset>

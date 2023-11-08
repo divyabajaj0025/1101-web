@@ -65,4 +65,7 @@ footer{
     border: #000000 2px dashed;
     border-radius: 100px;
 }
+.content form{
+    width: max-content;
+}
 
